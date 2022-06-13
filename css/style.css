@@ -7,21 +7,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
     min-width: 320px;
 }
-a, button {
-    transition: all .3s ease-in-out;
-    outline: none!important;
+.b-parallax {
+    background-attachment: scroll;
 }
 a:hover {
     text-decoration: none;
     cursor: pointer;
-}
-#page-loading-blocs-notifaction {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 100000;
-    background: #FFFFFF url("../img/pageload-spinner.gif") no-repeat center center;
 }
 .bloc {
     width: 100%;
@@ -46,6 +37,10 @@ a:hover {
 }
 .bloc-sm {
     padding: 20px 50px;
+}
+.image-resize-mode {
+    height: 100px;
+    width: 100px;
 }
 .bg-center,
 .bg-l-edge,
@@ -122,7 +117,7 @@ a:hover {
     border-color: rgba(255, 255, 255, 1);
 }
 .d-bloc .panel {
-    color: rgba(0, 0, 0, .5);
+    color: black;
 }
 .d-bloc .panel button:hover {
     color: rgba(0, 0, 0, .7);
@@ -146,7 +141,7 @@ a:hover {
 }
 .d-bloc .panel,
 .l-bloc {
-    color: rgba(0, 0, 0, .5);
+    color: black;
 }
 .d-bloc .panel button:hover,
 .l-bloc button:hover {
@@ -213,7 +208,7 @@ a:hover {
 .voffset-lg {
     margin-top: 80px;
 }
-.row-no-gutters {
+.-no-gutters {
     margin-right: 0;
     margin-left: 0;
 }
@@ -222,7 +217,7 @@ a:hover {
     padding-right: 0;
     padding-left: 0;
 }
-#bloc-1-hero h1 {
+.bloc-1-hero h1 {
     font-size: 32px;
 }
 .navbar {
@@ -241,10 +236,13 @@ a:hover {
     max-height: 200px;
     margin: 0 5px 0 0;
     display: inline;
+    height: 200px;
+    width: 100%;
 }
 .navbar-brand img[src$=svg] {
     min-width: 100px;
     height: 40px;
+    width: 200px;
 }
 .nav-center .navbar-brand img {
     margin: 0;
@@ -439,7 +437,7 @@ a[data-lightbox] {
 }
 a[data-lightbox]:hover::before {
     content: "+";
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Arial;
     font-size: 32px;
     width: 50px;
     height: 50px;
@@ -529,7 +527,7 @@ a[data-lightbox]:hover img {
     background: none;
 }
 h1, h2, h3, h4, h5, h6, p, label,.btn,a {
-    font-family: "Helvetica";
+    font-family: "Helvetica", Arial, sans-serif;
     font-weight: 400;
 }
 .container {
@@ -607,7 +605,7 @@ h3 {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
 }
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: #a34722;
     padding: 40px 40px 40px 40px;
 }
 .bold-link {
@@ -660,31 +658,35 @@ h3 {
     background-image: url("../img/lines-h2-bg.png");
 }
 .bg-banniere {
-    background-image: url("../img/agence-la-panthere.png");
+    background-image: url("../img/agence-la-panthere.avif");
 }
 .bg-presentation {
-    background-image: url("../img/image-de-presentation.png");
+    background-image: url("../img/image-de-presentation.avif");
 }
 .lien-nav {
     display: inline-block;
 }
 .h2-contact {
     color: #FFFFFF;
+    position: relative;
 }
 .p-contact {
     color: #FFFFFF;
+    position: relative;
 }
 .lien-site-ext {
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
+    background-color: #a34722;
+    color: #FFFFFF;
 }
 .lien-site-ext:hover, .lien-site-ext:focus {
     background-color: #FFFFFF;
     border: 1px solid #a34722;
-    border-radius: 20px;
-    transition: all 0s;
+    color: #000000;
 }
 @media (max-width: 1024px) {
     .bloc {
@@ -708,9 +710,7 @@ h3 {
     }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    .b-parallax {
-        background-attachment: scroll;
-    }
+    
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
@@ -820,6 +820,8 @@ h3 {
     .navbar-brand img {
         max-height: 40px;
         width: auto;
+        height: 40px;
+        width: 100%;
     }
     .nav-invert .navbar-header {
         float: none;
@@ -884,12 +886,8 @@ h3 {
     }
     .portfolio-thumb {
         width: 100%;
-    }
-}
-@media (max-width: 400px) {
-    .bloc {
-        padding-left: 0;
-        padding-right: 0;
+        width: 200px;
+        height: 200px;
     }
 }
 @media (max-width: 767px) {
