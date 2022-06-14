@@ -640,6 +640,7 @@ h3 {
 .btn-atomic-tangerine:hover, .btn-atomic-tangerine:focus {
     color: #a34722;
     background-color: #FFFFFF;
+    border: #a34722 1px solid;
 }
 .ltc-white {
     color: #FFFFFF!important;
@@ -706,9 +707,6 @@ h3 {
     .bloc-tile-4.full-width-bloc .container {
         padding-left: 0;
         padding-right: 0;
-    }
-    .navbar .nav {
-        max-width: 80%
     }
     .nav-center.navbar .nav {
         max-width: 100%
