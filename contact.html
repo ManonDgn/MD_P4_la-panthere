@@ -22,7 +22,7 @@
 				<div class="navbar row">
 					<div class="navbar-header">
 						<a class="navbar-brand" href="index.html"><img src="img/agence-la-panthere-monochrome.svg" alt="logo de l'agence sous forme d'une tête de panthère"/></a>
-						<button aria-expanded="false" id="nav-toggle" id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+						<button aria-expanded="false" id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
 							<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 						</button>
 					</div>
@@ -64,7 +64,7 @@
 				<div class="container bloc-lg">
 					<div class="row">
 						<div class="col-sm-6">
-							<form id="form_1" method="post" action="./includes/form_1.php" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
+							<form id="form_1" method="post" action="./includes/form_1.php">
 								<div class="form-group">
 									<label for="name">
 										Nom
@@ -89,8 +89,7 @@
 									</label>
 									<textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
 								</div> 
-								<input id="to" class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" name="Envoyer le formulaire" aria-label ="Envoyer le formulaire" type="submit">
-								</input>
+								<input id="to" class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" name="Envoyer le formulaire" aria-label ="Envoyer le formulaire" type="submit" />
 							</form>
 						</div>
 						<div class="col-sm-6">
